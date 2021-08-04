@@ -41,7 +41,7 @@ export const createValidationRuleSet = ({
         mosaicId: 'required|mosaicId',
         message: `maxMessage:${maxMessageSize}`,
         namespaceDuration: `required|min_value:${
-            minNamespaceDuration / networkConfig[NetworkType.TEST_NET].networkConfigurationDefaults.blockGenerationTargetTime
+            60 / networkConfig[NetworkType.TEST_NET].networkConfigurationDefaults.blockGenerationTargetTime
         }|maxNamespaceDuration`,
         // remove symbol from regex when rest https://github.com/nemtech/catapult-rest/issues/631 fixed
         namespaceName: {
